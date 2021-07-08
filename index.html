@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axiox</title>
+</head>
+<body>
+    <h1 class="header"></h1>
+
+    Ac:<input type="text" class="account"><br/>
+    PW:<input type="text" class="password"><br/>
+    <input type="button" value="送出" class="send">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+    // console.log(axios);
+
+    //https://hexschool.github.io/ajaxHomework/data.json
+    //讀取的網址
+
+    // let name;
+    // axios.get('https://hexschool.github.io/ajaxHomework/data.json')
+    //     .then(function(response){
+    //         name = response.data[0].name;
+    //         randerData();
+            // header.innerHTML = name;
+            // console.log(response);
+            // console.log(response.data);
+            // console.log(response.status);
+            // console.log(response.statusText);
+            // console.log(response.headers);
+            // console.log(response.config);
+        // });
+        
+    // fucntion randerData(){
+    //     console.log(name);
+    //     const header = document.querySelector('.header');
+    //     header.textContent = name;
+    // }
+
+    const account = document.querySelector(".account");
+    const password = document.querySelector(".password");
+    const send = document.querySelector(".send");
+
+
+    send.addEventListener('click',function(e){
+        callSignUp();
+    })
+
+    function callSignUp(){
+
+        // if(account.value == "" || password.value == ""){
+        //     alert('請填寫正確資訊');
+        //     return;
+        // }
+        let obj = {}; 
+        obj.email = account.value;
+        obj.password = password.value;
+        console.log(obj);
+        //https://hexschool-tutorial.herokuapp.com/api/signup
+        axios.post('https://hexschool-tutorial.herokuapp.com/api/signin',obj)
+            .then(function (response){
+                // console.log(response.data);
+                alert(response.data.message);
+            })
+            .catch(function (error){
+                console.log(error);
+            });
+    }
+</script>
+
+    
+
+
+</body>
+</html>

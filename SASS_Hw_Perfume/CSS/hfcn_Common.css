@@ -1,0 +1,101 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+/*# sourceMappingURL=normalize.min.css.map */
+
+/*共同 歸零  header + footer + f_carousel
+****  ****/
+/* body{width: 1730px;} */
+body, ul, h2, h3, p{margin:0;padding: 0;}
+li {list-style-type: none;}
+a{text-decoration: none;}
+
+/* 寛度問題？ */
+/** Login Page   
+**  固定格局      
+**   左右      **/
+.header, .btn_group, footer div{
+    display: flex;
+    justify-content: space-between;
+}
+/* PC版置中推 */
+.header, nav ul, .container, footer div{    
+    margin: 0 auto;
+    width: 1200px;
+}
+/* 水平中 */
+.menu, .contact, .btn_group a, .copyright{
+    display: flex;
+    align-items: center;
+}
+/* Flex + row */
+.menu, .contact{flex-direction: row;}
+nav ul, .container{display: flex;}
+
+/* pic */
+.logo, .logo1{width: 128px;height: 38px;}
+.logo{background:url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume.png') 0% 0% no-repeat padding-box;}
+.logo1{background:url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfumewhite.png') 0% 0% no-repeat padding-box;}
+
+
+/* padding */
+.header{padding: 8px 0;}
+nav ul{padding: 14px 0;}
+/* Block 上下  */
+.container{padding: 80px 0;}
+/* ul 上下 */
+footer ul{padding: 28px 0;}
+
+/** margin 
+**  header footer 向左推
+**  nav 向右推           **/
+.menu li, .contact li, footer span{margin-left: 28px;}
+/* icon */
+.menu li a i{margin-right: 4px;}
+nav li{margin-right: 28px;}
+
+/* font size li */
+.menu li a ,nav li a{font-size: 22px;}
+footer span, .shopping span, .shopping s, .shopping p, b{font-size: 16px;}
+
+
+/* color bg + text, btn */
+nav, .b_brown, footer{background-color: #916000;}
+.container a, .t_brown, .bottle_rblock a, .introduction a{color: #916000;}
+.menu li a, .shopping s, .fc_block{color:#8d8d8d;}  /*.tGrey*/
+nav li a, .t_white, footer span, footer li a, .home_btn, .soldout, .fc_inBtg button{color: #fff;}
+.b_white{background-color: #fff;}
+
+/* f_carousel 
+footer */
+.f_carousel{
+    height: 600px;
+    background: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index10.jpg') 0% 47% no-repeat;
+}
+.f_carousel{background-size: cover;position: relative;}
+
+.fc_inBtg{display: flex;}
+
+.fc_block{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
+
+.fc_inBtg input, .fc_inBtg button{
+    border: 2px solid #916000;
+    padding: 16px 12px;
+}
+.fc_inBtg button{
+    background: #916000;
+    border-radius: 0 4px 4px 0;
+}
+.fc_inBtg input{border-radius:  4px 0 0 4px;}
+
+.fc_block{color: #8d8d8d;}
+.fc_inBtg button{color: #fff;}
+
+.fc_block h2{line-height: 42px;}
+
+.fc_block h2{margin-bottom: 20px;}
+
+.fc_inBtg input, .fc_inBtg button{font-size: 20px;} 

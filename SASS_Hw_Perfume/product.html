@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <!-- <link rel="stylesheet" href="CSS/Login.css"> -->
+    <!-- <link rel="stylesheet" href="CSS/Home.css"> -->
+    <link rel="stylesheet" href="CSS/hfcn_Common.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="header"></div>
+
+
+<div class="f_carousel">
+    <div class="fc_block">
+        <h2>記得<br/>
+            訂閱以獲取更多資訊！</h2>
+        <div class="fc_inBtg">
+            <input type="email" placeholder="Your email adress">
+            <button>Subscribe</button>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+<script>
+    $(document).ready(function(){
+        console.log($);
+        $('.header').load('Header.html')
+        $('.footer').load('Footer.html')
+    })
+</script>
+<!-- 
+所以 header css 要拆出來
+底部輪播也是
+
+ -->
+</body>
+</html>
